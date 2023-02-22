@@ -4,9 +4,9 @@ Due to memory restrictions, you can only have 4 hotels on one map--although you 
 
 ## How to add to your board
 ### init.c
-Add the Init event as a global before turn event. This clears the memory associated with each hotel. Hotels will have random investments if you don't do this.
+Add the Init event as a before turn event on the board properties tab. This clears the memory associated with each hotel. Hotels will have random investments if you don't do this.
 
-![](https://imgur.com/bGmQGs6.png)
+![](https://imgur.com/EOdjcoA.png)
 
 ---
 

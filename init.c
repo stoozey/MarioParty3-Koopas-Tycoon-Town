@@ -1,3 +1,7 @@
+// NAME: Init
+// GAMES: MP3_USA
+// EXECUTION: Direct
+
 ///region includes
 
 #include "ultra64.h"
@@ -5,6 +9,10 @@
 ///endregion
 
 ///region defines
+
+#define bool int
+#define true 1
+#define false 0
 
 #define TOTAL_PLAYERS 4
 #define TOTAL_HOTELS 5
@@ -22,7 +30,12 @@ u32 *hotels[TOTAL_HOTELS] = {
         (u32*) 0x800CD05E
 };
 
+bool initiated = false;
+
 void main() {
+    if (initiated) return;
+    initiated = true;
+
     for (int i = 0; i < TOTAL_HOTELS; i++) {
         for (int j = 0; j < TOTAL_PLAYERS; j++) {
             u32 *hotel = hotels[i];
